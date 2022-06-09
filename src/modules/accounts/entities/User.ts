@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
-@Entity("users")
+@Entity("prg_users")
 class User {
     @PrimaryColumn()
     id: string;
@@ -15,14 +15,11 @@ class User {
     @Column()
     password: string;
 
-    @Column()
-    driver_license: string;
-
-    @Column()
-    isAdmin: boolean;
+    @CreateDateColumn()
+    created_at: string;
 
     @CreateDateColumn()
-    created_at: Date;
+    closed_at: Date;
 
     constructor() {
         if (!this.id) {
