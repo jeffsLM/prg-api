@@ -1,8 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
-import { v4 as uuidV4 } from "uuid";
 
-@Entity("prg_users")
-class User {
+@Entity("prg_character")
+class Character {
     @PrimaryColumn()
     id: string;
 
@@ -21,11 +20,11 @@ class User {
     @CreateDateColumn()
     closed_at: Date | null;
 
-    constructor() {
-        if (!this.id) {
-            this.id = uuidV4();
-        }
-    }
+    // constructor() {
+    //     if (!this.id) {
+    //         this.id = uuidV4();
+    //     }
+    // }
 }
 
-export { User };
+export { Character };
