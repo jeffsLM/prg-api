@@ -1,5 +1,5 @@
 import { ICreateCharacterDTO } from "../dtos/ICreateCharacterDTO";
-import { Character } from "../entites/Character";
+import { Character } from "../entities/Character";
 
 interface ICharacterRepository {
     create(data: ICreateCharacterDTO): Promise<void>;

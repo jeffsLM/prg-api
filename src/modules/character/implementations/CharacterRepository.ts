@@ -1,7 +1,7 @@
 import { getRepository, Repository } from "typeorm";
 
 import { ICreateCharacterDTO } from "../dtos/ICreateCharacterDTO";
-import { Character } from "../entites/Character";
+import { Character } from "../entities/Character";
 import { ICharacterRepository } from "../repositories/ICharacterRepository";
 
 class CharacterRepository implements ICharacterRepository {
@@ -14,17 +14,17 @@ class CharacterRepository implements ICharacterRepository {
     async create({
         id_user,
         name,
-        class: classe,
-        sub_class,
+        class_group,
+        sub_class_group,
     }: ICreateCharacterDTO): Promise<void> {
-        const character = this.repository.create({
+        const character_id = this.repository.create({
             id_user,
             name,
-            class: classe,
-            sub_class,
+            class_group,
+            sub_class_group,
         });
 
-        await this.repository.save(character);
+        await this.repository.save(character_id);
     }
 
     async findByName(name: string): Promise<Character> {

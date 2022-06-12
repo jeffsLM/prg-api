@@ -1,29 +1,29 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
-@Entity("prg_personagem")
+@Entity("prg_character")
 class Character {
     @PrimaryColumn()
-    id_user: string;
-
-    @PrimaryColumn()
     id_character: string;
+
+    @Column()
+    id_user: string;
 
     @Column()
     name: string;
 
     @Column()
-    class: string | null;
+    class_group: string;
 
     @Column()
-    sub_class: string | null;
+    sub_class_group: string;
 
     @CreateDateColumn()
     created_at: string;
 
     constructor() {
-        if (!this.id_user) {
-            this.id_user = uuidV4();
+        if (!this.id_character) {
+            this.id_character = uuidV4();
         }
     }
 }

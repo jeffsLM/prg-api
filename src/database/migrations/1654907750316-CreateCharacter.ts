@@ -9,8 +9,12 @@ export class CreateCharacter1654907750316 implements MigrationInterface {
                     { name: "id_user", type: "uuid" },
                     { name: "id_character", type: "uuid" },
                     { name: "name", type: "varchar" },
-                    { name: "class", type: "varchar", isNullable: true },
-                    { name: "sub_class", type: "varchar", isNullable: true },
+                    { name: "class_group", type: "varchar", isNullable: true },
+                    {
+                        name: "sub_class_group",
+                        type: "varchar",
+                        isNullable: true,
+                    },
                     { name: "created_at", type: "timestamp", default: "now()" },
                 ],
             })
