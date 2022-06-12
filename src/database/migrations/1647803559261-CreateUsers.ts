@@ -6,7 +6,7 @@ export class CreateUsers1647803559261 implements MigrationInterface {
             new Table({
                 name: "prg_users",
                 columns: [
-                    { name: "id", type: "uuid" },
+                    { name: "id_user", type: "uuid" },
                     { name: "name", type: "varchar" },
                     { name: "email", type: "varchar", isUnique: true },
                     { name: "password", type: "varchar" },

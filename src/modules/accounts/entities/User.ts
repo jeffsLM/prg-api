@@ -4,7 +4,7 @@ import { v4 as uuidV4 } from "uuid";
 @Entity("prg_users")
 class User {
     @PrimaryColumn()
-    id: string;
+    id_user: string;
 
     @Column()
     name: string;
@@ -22,8 +22,8 @@ class User {
     closed_at: Date | null;
 
     constructor() {
-        if (!this.id) {
-            this.id = uuidV4();
+        if (!this.id_user) {
+            this.id_user = uuidV4();
         }
     }
 }
