@@ -1,9 +1,9 @@
 interface ICreateCharacterDTO {
-    idUser: string;
-    character: string;
+    id_user: string;
+    id_character: string;
     name: string;
     class: string;
-    subClass: string;
+    sub_class: string;
 }
 
 export { ICreateCharacterDTO };
