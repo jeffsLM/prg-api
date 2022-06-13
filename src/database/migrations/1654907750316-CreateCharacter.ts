@@ -15,6 +15,36 @@ export class CreateCharacter1654907750316 implements MigrationInterface {
                         type: "varchar",
                         isNullable: true,
                     },
+                    {
+                        name: "max_life_points",
+                        type: "int",
+                        isNullable: true,
+                    },
+                    {
+                        name: "life_points",
+                        type: "int",
+                        isNullable: true,
+                    },
+                    {
+                        name: "max_mana_points",
+                        type: "int",
+                        isNullable: true,
+                    },
+                    {
+                        name: "mana_points",
+                        type: "int",
+                        isNullable: true,
+                    },
+                    {
+                        name: "max_especial_points",
+                        type: "int",
+                        isNullable: true,
+                    },
+                    {
+                        name: "especial_points",
+                        type: "int",
+                        isNullable: true,
+                    },
                     { name: "created_at", type: "timestamp", default: "now()" },
                 ],
             })

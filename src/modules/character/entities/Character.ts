@@ -18,6 +18,24 @@ class Character {
     @Column()
     sub_class_group: string;
 
+    @Column()
+    max_life_points: number;
+
+    @Column()
+    life_points: number;
+
+    @Column()
+    max_mana_points: number;
+
+    @Column()
+    mana_points: number;
+
+    @Column()
+    max_especial_points: number;
+
+    @Column()
+    especial_points: number;
+
     @CreateDateColumn()
     created_at: string;
 
