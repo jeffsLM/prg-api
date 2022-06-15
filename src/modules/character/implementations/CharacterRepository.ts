@@ -36,11 +36,42 @@ class CharacterRepository implements ICharacterRepository {
             especial_points,
         });
 
-        await this.repository.save(character_id);
+        await this.repository.insert(character_id);
+    }
+    async save({
+        id_character,
+        id_user,
+        name,
+        class_group,
+        sub_class_group,
+        max_life_points,
+        life_points,
+        max_mana_points,
+        mana_points,
+        max_especial_points,
+        especial_points,
+    }: ICreateCharacterDTO): Promise<void> {
+        await this.repository.update(
+            {
+                id_character,
+            },
+            {
+                id_user,
+                name,
+                class_group,
+                sub_class_group,
+                max_life_points,
+                life_points,
+                max_mana_points,
+                mana_points,
+                max_especial_points,
+                especial_points,
+            }
+        );
     }
 
-    async findByName(name: string): Promise<Character> {
-        const character = await this.repository.findOne({ name });
+    async findByUserId(idUser: string): Promise<Character> {
+        const character = await this.repository.findOne({ id_user: idUser });
         return character;
     }
 
