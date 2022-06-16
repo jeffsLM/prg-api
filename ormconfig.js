@@ -5,5 +5,11 @@ module.exports = {
     "entities": [process.env.ENTITIES_LOCATION],
     "cli": {
         "migrationsDir": process.env.MIGRATIONS_DIR
+    },
+    "ssl": true,
+    "extra": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
     }
 }
