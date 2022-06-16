@@ -4,6 +4,8 @@ import { UsersRepository } from "../../modules/accounts/implementations/UsersRep
 import { IUsersRepository } from "../../modules/accounts/repositories/IUsersRepository";
 import { CharacterRepository } from "../../modules/character/implementations/CharacterRepository";
 import { ICharacterRepository } from "../../modules/character/repositories/ICharacterRepository";
+import { GrimoireRepository } from "../../modules/grimoire/implementations/GrimoireRepository";
+import { IGrimoireRepository } from "../../modules/grimoire/repositories/IGrimoireRepository";
 
 container.registerSingleton<IUsersRepository>(
     "UsersRepository",
@@ -13,4 +15,9 @@ container.registerSingleton<IUsersRepository>(
 container.registerSingleton<ICharacterRepository>(
     "CharacterRepository",
     CharacterRepository
+);
+
+container.registerSingleton<IGrimoireRepository>(
+    "GrimoreRepository",
+    GrimoireRepository
 );
