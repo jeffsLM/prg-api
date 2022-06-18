@@ -19,9 +19,9 @@ class ListCharacterUserUseCase {
         const userCharacterAlreadyExists =
             await this.characterRepository.findByUserId(id_user);
 
-        if (!userCharacterAlreadyExists) {
-            throw new AppError("user not have un character");
-        }
+        // if (!userCharacterAlreadyExists) {
+        //     throw new AppError("user not have un character");
+        // }
 
         return userCharacterAlreadyExists;
     }
