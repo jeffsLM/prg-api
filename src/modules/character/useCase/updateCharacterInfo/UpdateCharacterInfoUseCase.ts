@@ -2,13 +2,8 @@ import { inject, injectable } from "tsyringe";
 
 import { AppError } from "../../../../erros/appError";
 import { ICharacterRepository } from "../../repositories/ICharacterRepository";
+import {ICreateCharacterDTO} from '../../dtos/ICreateCharacterDTO';
 
-interface IUpdateCharacterRequest {
-    id_user: string;
-    name: string;
-    class_group: string;
-    sub_class_group: string;
-}
 
 @injectable()
 class UpdateCharacterUseCase {
@@ -22,7 +17,13 @@ class UpdateCharacterUseCase {
         name,
         class_group,
         sub_class_group,
-    }: IUpdateCharacterRequest): Promise<void> {
+        max_life_points,
+        life_points,
+        max_mana_points,
+        mana_points,
+        max_especial_points,
+        especial_points,
+    }: ICreateCharacterDTO): Promise<void> {
         const userCharacterAlreadyExists =
             await this.characterRepository.findByUserId(id_user);
 
@@ -41,6 +42,12 @@ class UpdateCharacterUseCase {
         characterAlreadyExists.name = name;
         characterAlreadyExists.class_group = class_group;
         characterAlreadyExists.sub_class_group = sub_class_group;
+        characterAlreadyExists.max_life_points = max_life_points;
+        characterAlreadyExists.life_points = life_points;
+        characterAlreadyExists.max_mana_points = max_mana_points;
+        characterAlreadyExists.mana_points = mana_points;
+        characterAlreadyExists.max_especial_points = max_especial_points;
+        characterAlreadyExists.especial_points = especial_points;
 
         await this.characterRepository.save(characterAlreadyExists);
     }
