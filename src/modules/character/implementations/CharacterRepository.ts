@@ -79,6 +79,11 @@ class CharacterRepository implements ICharacterRepository {
         const character = await this.repository.findOne(id);
         return character;
     }
+
+    async findAll(): Promise<Character[]> {
+        const character = await this.repository.find();
+        return character;
+    }
 }
 
 export { CharacterRepository };

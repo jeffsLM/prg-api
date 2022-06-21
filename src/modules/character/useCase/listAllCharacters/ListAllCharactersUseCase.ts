@@ -4,26 +4,18 @@ import { inject, injectable } from "tsyringe";
 import { Character } from "../../entities/Character";
 import { ICharacterRepository } from "../../repositories/ICharacterRepository";
 
-interface IRequest {
-    id_user: string;
-}
-
 @injectable()
-class ListCharacterUserUseCase {
+class ListAllCharactersUseCase {
     constructor(
         @inject("CharacterRepository")
         private characterRepository: ICharacterRepository
     ) {}
 
-    async execute({ id_user }: IRequest): Promise<Character> {
+    async execute(): Promise<Character[]> {
         const userCharacterAlreadyExists =
-            await this.characterRepository.findByUserId(id_user);
-
-        // if (!userCharacterAlreadyExists) {
-        //     throw new AppError("user not have un character");
-        // }
+            await this.characterRepository.findAll();
 
         return userCharacterAlreadyExists;
     }
 }
-export { ListCharacterUserUseCase };
+export { ListAllCharactersUseCase };

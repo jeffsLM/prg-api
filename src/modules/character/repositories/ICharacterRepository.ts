@@ -6,6 +6,7 @@ interface ICharacterRepository {
     save(data: ICreateCharacterDTO): Promise<void>;
     findByUserId(email: string): Promise<Character>;
     findById(id: string): Promise<Character>;
+    findAll(): Promise<Character[]>;
 }
 
 export { ICharacterRepository };
