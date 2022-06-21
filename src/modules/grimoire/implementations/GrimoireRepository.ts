@@ -30,7 +30,7 @@ class GrimoireRepository implements IGrimoireRepository {
             icon,
         };
 
-        console.log(data);
+        // console.log(data);
         const grimoire_id = this.repository.create({
             id_character,
             skill,

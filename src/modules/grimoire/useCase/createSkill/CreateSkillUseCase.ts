@@ -26,15 +26,15 @@ class CreateSkillUseCase {
                 skill
             );
 
-        console.log({
-            id_character,
-            skill,
-            class_group,
-            type,
-            points,
-            rules,
-            icon,
-        });
+        // console.log({
+        //     id_character,
+        //     skill,
+        //     class_group,
+        //     type,
+        //     points,
+        //     rules,
+        //     icon,
+        // });
         if (skillAlreadyExists) {
             throw new AppError("Skill alredy exists");
         }
