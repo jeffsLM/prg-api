@@ -1,8 +1,8 @@
 <div align="center">
     <img src="https://github.com/jeffsLM/prg-app/raw/master/public/images/logo_prg_tm%402x.png" alt="PRG Logo">
 </div>
+<p align="center">API to manage sessions, characters, items and skills within PRG - Table Master</p>
 
-<h1 align="center">PRG - Table Master API</h1>
 <div  align="center">
 
 ![Badge](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
@@ -17,7 +17,6 @@
 ![Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
 </div>
-<p align="center">API to manage sessions, characters, items and skills within PRG - Table Master</p>
 
 <h2>About the project </h2>
 
