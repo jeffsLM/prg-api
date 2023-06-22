@@ -17,7 +17,7 @@
 ![Badge](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
 </div>
-<p align="center">Fully customizable, universal token creator for quick RPG sessions featuring GM-created skills, classes, items, and more.</p>
+<p align="center">API to manage sessions, characters, items and skills within PRG - Table Master</p>
 
 <h2>About the project </h2>
 
